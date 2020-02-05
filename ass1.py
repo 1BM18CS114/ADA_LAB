@@ -28,7 +28,7 @@ def gcd(m, n):
 ##Binary search
 a = [1, 2, 3, 3, 3, 4, 5, 6]
 length = 8
-def search(key, a):
+def search(key, a, length):
 	start1 = 0
 	end1 = length - 1
 	
@@ -59,9 +59,17 @@ def search(key, a):
 			start1 = mid1 + 1
 	
 	start1 = end1 = pos
-	while key - a[start1] == 0 or key - a[end1] 	
-				
-					
+	while key - a[start1] == 0 or key - a[end1] == 0:
+		if key - a[start1] == 0:
+			start1 -= 1
+		if key - a[end1] == 0:
+			end1 += 1
+	print("First pos is {}".format(start1))
+	print("End pos is {}".format(end1))
+	print("Count is {}".format(end1 - start1))
+	
+search(3, a, 8)	
+						
 				
 	
 		
