@@ -1,7 +1,5 @@
 import time
 
-
-
 def bub(arr):
 	n = len(arr)
 	
@@ -18,15 +16,13 @@ def bub(arr):
 		n -= 1
 		#print(arr)
 
-leng = randint(0, 10)
+leng = 10
 arr = []
 for i in range(leng):
 	val = randint(0, 10000)
 	arr.append(val)	
 #print(arr)
+start = time.time()
 #bub(arr)
-#print(arr)
-
-
-					
-	
+end = time.time()
+print(end - start)
